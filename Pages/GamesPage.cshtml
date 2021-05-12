@@ -1,0 +1,23 @@
+@page
+@model GamesPageModel
+
+<h1 style="text-align: center">View Games</h1>
+
+<table class="table">
+    <tr style="color: #fff">
+        <td>Name</td>
+        <td>Genre</td>
+        <td>Release Date</td>
+    </tr>
+    @foreach (var game in Model.games.Games)
+    {
+    <tr>
+        <td>@game.Name</td>
+        <td>@game.Genre</td>
+        <td>@game.ReleaseDate</td>\
+        <td>
+            <button type="button" class="btn btn-primary">Order</button>
+        </td>
+    </tr>
+    }
+</table>
